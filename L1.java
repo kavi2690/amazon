@@ -134,7 +134,7 @@ public class L1 {
 	}
 	
 	
-	@Test(priority = 11, groups="L")
+	@Test(priority = 11, dependsOnGroups="L")
 	public void Logout() throws InterruptedException{
 		Thread.sleep(2000);
 		
@@ -144,6 +144,10 @@ public class L1 {
 		Thread.sleep(2000);
 		
 		n.findElementByXPath("//a[@id='nav-item-signout']").click();
+
+		 Thread.sleep(2000);
+
+		n.quit();
 		
 	
 	}
